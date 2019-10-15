@@ -8,18 +8,18 @@ const eqArrays = function(firstArray, secondArray) {
 };
 
 const assertArraysEqual = function(firstArray, secondArray) {
-    console.log(eqArrays(firstArray, secondArray));
-}
+  console.log(eqArrays(firstArray, secondArray));
+};
 
 const middle = function(array) {
-  if(array.length < 3) {
+  if (array.length < 3) {
     return [];
-  } else if(array.length % 2 !== 0) {
+  } else if (array.length % 2 !== 0) {
     return [array[(array.length - 1) / 2]];
   } else {
     return [array[array.length / 2 - 1], array[array.length / 2]];
   }
-}
+};
 
 assertArraysEqual(middle([1]), []); // => []
 assertArraysEqual(middle([1, 2]), []); // => []
