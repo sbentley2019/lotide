@@ -8,7 +8,7 @@ const eqArrays = function(firstArray, secondArray) {
 };
 
 const assertArraysEqual = function(firstArray, secondArray) {
-    console.log(eqArrays(firstArray, secondArray));
-}
+  console.log(eqArrays(firstArray, secondArray));
+};
 
 assertArraysEqual([1, 3, 3], [1, 2, 3]);
