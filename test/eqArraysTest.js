@@ -1,22 +1,25 @@
-const eqArrays = require("../eqArrays");
+const eqArrays = require('../eqArrays');
 const assert = require('chai').assert;
 
 describe("#eqArrays", () => {
-  it("returns true if { a:'1', b:'2' } equals { b:'2', a:'1' }", () => {
-    const ab = { a: "1", b: "2" };
-    const ba = { b: "2", a: "1" };
-    assert.deepEqual(eqObjects(ab, ba), true);
+  it("returns true when comparing [1, 2, 3] and [1, 2, 3]", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+  });
+
+  it("returns true when comparing [[2, 3], [4]] and [[2, 3], [4]]", () => {
+    
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
+  });
+
+  it("returns false when comparing [[2, 3], [4]], [[2, 3], [4, 5]]", () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
+  });
+
+  it("returns false when comparing [[2, 3], [4]] and [[2, 3], 4]", () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
+  });
+
+  it("returns true when comparing [[2, 3], [[[4]]]] and [[2, 3], [[[4]]]]", () => {
+    assert.deepEqual(eqArrays([[2, 3], [[[4]]]], [[2, 3], [[[4]]]]), true);
   });
 });
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
-
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true); // => true
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false); // => false
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false); // => false
-assertEqual(eqArrays([[2, 3], [[[4]]]], [[2, 3], [[[4]]]]), true); // => true

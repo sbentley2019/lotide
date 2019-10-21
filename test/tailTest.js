@@ -1,4 +1,4 @@
-const tail = require("../tail.js");
+const tail = require('../tail.js');
 const assert = require('chai').assert;
 
 describe("#tail", () => {
