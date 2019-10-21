@@ -1,11 +1,11 @@
 const head = function(list) {
   if (list === undefined) {
     return undefined;
-  } else if (typeof list === 'number' || list.length === 1) {
+  } 
+  if (!Array.isArray(list)) {
     return list;
-  } else {
-    return list[0];
   }
+  return list[0];
 };
 
 module.exports = head;
