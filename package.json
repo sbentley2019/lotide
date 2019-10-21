@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@sbentley2019/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "practice lotide functions for my learning purposes",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/sbentley2019/lotide.git"
   },
-  "author": "",
+  "author": "Stewart Bentley",
+  "email": "sbentley000@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sbentley2019/lotide/issues"

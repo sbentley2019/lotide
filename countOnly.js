@@ -6,8 +6,7 @@ const countOnly = function(allItems, itemsToCount) {
       finalObj[element] === undefined ? finalObj[element] = 1 : finalObj[element]++;
     }
   }
-
   return finalObj;
-}
+};
 
 module.exports = countOnly;

@@ -1,7 +1,7 @@
 const head = function(list) {
   if (list === undefined) {
     return undefined;
-  } 
+  }
   if (!Array.isArray(list)) {
     return list;
   }
